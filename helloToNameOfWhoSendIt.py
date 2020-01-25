@@ -1,6 +1,9 @@
 #this will send a Hello to any message :) just learning...
 import requests
 
+def response_to_user_message(text, userId):
+    r = requests.post('https://api.telegram.org/bot%(key)s/sendMessage?chat_id=%(id)s&text=%(text)s'
+    %{'key': key, 'id': userId, 'text': text})
 with open("api_key") as f:
     key = f.read()
 
@@ -18,11 +21,11 @@ user = data['result']
 
 #if there is a new message say hello
 for a in user:
-    text = "Hello " + a['message']['from']['first_name']
-    userId = a['message']['from']['id']
-    r = requests.post('https://api.telegram.org/bot%(key)s/sendMessage?chat_id=%(id)s&text=%(text)s'
-%{'key': key, 'id': userId, 'text': text})
-    new_r_updateId = a['update_id']
+    if a['message']['text'] == "/hello":
+        text = "Hello " + a['message']['from']['first_name']
+        userId = a['message']['from']['id']
+        response_to_user_message(text, userId)        
+        new_r_updateId = a['update_id']
 
 #if you sent new message store last message you responded
 if new_r_updateId > int(last_update_id) or new_r_updateId == int(last_update_id):
