@@ -18,14 +18,13 @@
           // switch to dark mode
           $("body").css("color", "var(--night-light-color)");
           $("body").css("background", "var(--night-light-background)");
-          $("a").css("color", "var(--night-light-color-link)");
           $(".btn").html("Normal Mode");
           day = false;
         } else{
           // switch to light mode
+
           $("body").css("color", "var(--day-light-color)");
           $("body").css("background", "var(--day-light-background)");
-          $("a").css("color", "var(--day-light-color-link)");
           $(".btn").html("Dark Mode");
           day = true;
         }
@@ -40,11 +39,11 @@
     --day-light-color-link: #cc00ff;
     --night-light-color: #eee;
     --night-light-background: #111;
-    --night-light-color-link: #cc00ff;
   }
   body{
     background: var(--day-light-background);
     color: var(--day-light-color);
+    transition: 0.5s all ease;
   }
   a{
     padding: 0 2px;
