@@ -8,7 +8,7 @@ app.get("/", (req, res) =>{
 });
 
 app.get("/api", (req, res) =>{
-    res.sned({Kaimr: "kairm", ali: "alir"});
+    res.json({Kaimr: "kairm", ali: "alir"});
 })
 
 app.listen(3000);
