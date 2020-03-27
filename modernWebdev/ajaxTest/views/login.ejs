@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs"); %>
+<%- include("partials/navBar.ejs"); %>
+<p class="hint">user: alireza, pass: injast</p>
+<form method="POST">
+    <input type="text" name="username" id="username" placeholder="username">
+    <input type="password" name="password" id="password" placeholder="password">
+    <button id="btnLogin">Login</button>
+</form>
+
+<% if (typeof login != "undefined"){ 
+if(login == "YESS"){ %>
+<p>Yess you loged in</p>
+<% }
+else if(login == "noooo"){ %>
+<p>wronggg.</p>
+<%
+}
+} %>
+
+<%- include("partials/footer.ejs"); %>
