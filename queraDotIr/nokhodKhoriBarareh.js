@@ -5,6 +5,11 @@ const a = 10;
 const b = 8;
 const c = 6;
 
+// const inOutTime = [[1,6], [3,5], [2,8]];
+// const a = 5;
+// const b = 3;
+// const c = 1;
+
 // check for time conflict
 let timeConflict = false;
 for(let i = 0; i < inOutTime.length; i++){
@@ -17,7 +22,7 @@ for(let i = 0; i < inOutTime.length; i++){
 // finding brakpoint
 let breakPoints = []
 if(timeConflict){
-	console.log("you have time conflict")
+	return("you have time conflict")
 }
 else{
 	let ii = 0;
@@ -33,12 +38,8 @@ else{
 	breakPoints.sort((a, b) => {return a -b});
 }
 
-// calculating times(how many and what time)
-let peasEaters = {
-	'1eater': [],
-	'2eater': [],
-	'3eater': [],
-}
+// divide times(how many and what time)
+let peasEaters = [[], [], []];
 let counter = 0;
 for(let i = 0; i < breakPoints.length; i++){
 	for(let ii = 0; ii < inOutTime.length; ii++){
@@ -47,48 +48,30 @@ for(let i = 0; i < breakPoints.length; i++){
 		}
 	}
 	if(counter == 1){
-		peasEaters["1eater"].push(breakPoints[i]);
-		peasEaters["1eater"].push(breakPoints[i+1]);
+		peasEaters[0].push(breakPoints[i]);
+		peasEaters[0].push(breakPoints[i+1]);
 	}
 	if(counter == 2){
-		peasEaters["2eater"].push(breakPoints[i]);
-		peasEaters["2eater"].push(breakPoints[i+1]);
+		peasEaters[1].push(breakPoints[i]);
+		peasEaters[1].push(breakPoints[i+1]);
 	}
 	if(counter == 3){
-		peasEaters["3eater"].push(breakPoints[i]);
-		peasEaters["3eater"].push(breakPoints[i+1]);
+		peasEaters[2].push(breakPoints[i]);
+		peasEaters[2].push(breakPoints[i+1]);
 	}
 	counter = 0;
 }
 
 // calculate the money "slarakhan" should pay
-let money = 0;
-
-const e1 = peasEaters["1eater"];
-let i = e1.length-1;
-let sum = 0;
-while(i > 0){	
-	sum +=  e1[i] - e1[i-1];
-	i = i-2;
+let sums = [[0], [0], [0]];
+for(let i = 0; i < peasEaters.length; i++){
+	for(let ii = peasEaters[i].length-1; ii > 0; ii--){
+		sums[i][0] += peasEaters[i][ii] - peasEaters[i][ii-1];
+		// 2 step jump
+		ii--;
+	}
 }
-money += sum * a * 1;
 
-const e2 = peasEaters["2eater"];
-i = e2.length-1;
-sum = 0;
-while(i > 0){	
-	sum +=  e2[i] - e2[i-1];
-	i = i-2;
-}
-money += sum * b * 2;
-
-const e3 = peasEaters["3eater"];
-i = e3.length-1;
-sum = 0;
-while(i > 0){	
-	sum +=  e3[i] - e3[i-1];
-	i = i-2;
-}
-money += sum * c * 3;
-
+let money = (sums[0] * 1 * a) + (sums[1] * 2 * b) + (sums[2] * 3 * c);
+console.log(money);
 return money;
