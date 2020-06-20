@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class User extends Component{
-    render() {
-        const { Users } = this.props;
+const User = ({Users}) => {
         const UserList = Users.map(user =>{
             return (            
             <div className="user" key={user.id}>
@@ -18,8 +16,7 @@ class User extends Component{
             <div>
                 { UserList }
             </div>
-        )
-    }
+        )    
 }
 
 export default User
