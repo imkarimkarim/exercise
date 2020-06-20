@@ -2,12 +2,21 @@ import React, { Component } from 'react';
 
 class User extends Component{
     render() {
-        const { name, age, sport } = this.props;
-        return (
+        const { Users } = this.props;
+        const UserList = Users.map(user =>{
+            return (            
             <div className="user">
-                <div>Name: { name }</div>
-                <div>Age: { age }</div>
-                <div>Sport: { sport }</div>
+                <div>Name: { user.name }</div>
+                <div>Age: { user.age }</div>
+                <div>Sport: { user.sport }</div>
+                <hr></hr>
+                {/* {console.log(user)} */}
+            </div>
+            )
+        });
+        return (
+            <div>
+                { UserList }
             </div>
         )
     }
