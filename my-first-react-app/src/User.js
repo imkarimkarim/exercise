@@ -2,15 +2,21 @@ import React from 'react';
 
 const User = ({Users}) => {
         const UserList = Users.map(user =>{
-            return (            
-            <div className="user" key={user.id}>
-                <div>Name: { user.name }</div>
-                <div>Age: { user.age }</div>
-                <div>Sport: { user.sport }</div>
-                <hr></hr>
-                {/* {console.log(user)} */}
-            </div>
-            )
+
+            if(user.age > 18){            
+                return (            
+                <div className="user" key={user.id}>
+                    <div>Name: { user.name }</div>
+                    <div>Age: { user.age }</div>
+                    <div>Sport: { user.sport }</div>
+                    <hr></hr>
+                </div>
+                )
+            }
+            else{
+                return null
+            }
+            
         });
         return (
             <div>
@@ -18,5 +24,4 @@ const User = ({Users}) => {
             </div>
         )    
 }
-
 export default User
