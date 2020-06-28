@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import User from './User';
+import User from './user/User';
+import AddUser from './user/AddUser';
 
+// Container Component
 class App extends Component {
   state = {
     Users: [
@@ -10,12 +12,19 @@ class App extends Component {
       {name: "Mmd", age: 20, sport: "Street Soccer", id: 4}
     ]
   }
+  addToUsers = (objUser)=>{
+    let tmpUsers = [...this.state.Users, objUser];    
+    this.setState({
+      Users: tmpUsers
+    });
+  }
   render(){
     return (
       <div className="App">
         <h1>My first react app</h1>
         <p>Welcome :)</p>
         <User Users= { this.state.Users } />
+        <AddUser addToUsers= { this.addToUsers } />
       </div>
     );  
   }  
