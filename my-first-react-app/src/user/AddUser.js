@@ -14,7 +14,7 @@ class AddUser extends Component {
     fromSubmit = (e) =>{
         e.preventDefault();
         this.props.addToUsers(this.state);
-    }    
+    }
     render(){
         return(
                 <form onSubmit={this.fromSubmit}>

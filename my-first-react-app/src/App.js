@@ -13,18 +13,26 @@ class App extends Component {
     ]
   }
   addToUsers = (objUser)=>{
-    let tmpUsers = [...this.state.Users, objUser];    
+    objUser.id = 1 + this.state.Users.length;
+    let tmpUsers = [...this.state.Users, objUser];
     this.setState({
       Users: tmpUsers
     });
+  }
+  removeFromUsers = (userId) =>{
+    let tmpUsers = [...this.state.Users];
+    tmpUsers = tmpUsers.filter(usr =>{  
+      return usr.id !== userId 
+    })
+    this.setState({Users: tmpUsers})
   }
   render(){
     return (
       <div className="App">
         <h1>My first react app</h1>
         <p>Welcome :)</p>
-        <User Users= { this.state.Users } />
-        <AddUser addToUsers= { this.addToUsers } />
+        <User Users= { this.state.Users } removeFromUsers= {this.removeFromUsers} />
+        <AddUser addToUsers= { this.addToUsers }/>
       </div>
     );  
   }  

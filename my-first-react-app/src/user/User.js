@@ -1,15 +1,16 @@
 import React from 'react';
 
 // UI Component
-const User = ({Users}) => {
+const User = ({Users, removeFromUsers}) => {
         const UserList = Users.map(user =>{
 
             if(user.age > 18){            
                 return (            
                 <div className="user" key={user.id}>
-                    <div>Name: { user.name }</div>
-                    <div>Age: { user.age }</div>
-                    <div>Sport: { user.sport }</div>
+                    <span> Name: { user.name }</span> | 
+                    <span> Age: { user.age }</span> | 
+                    <span> Sport: { user.sport } </span>
+                    <button onClick={() =>{ removeFromUsers(user.id) }}>Delet It!</button>
                     <hr></hr>
                 </div>
                 )
@@ -19,6 +20,7 @@ const User = ({Users}) => {
             }
             
         });
+
         return (
             <div>
                 { UserList }
