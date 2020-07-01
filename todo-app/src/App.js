@@ -11,17 +11,27 @@ class App extends Component {
     ]
   }
   addTask = (task) =>{
+  try{
     task.id = this.state.todos[this.state.todos.length - 1].id + 1;
+  }
+  catch{
+    task.id = 1;
+  }
     const tmpState = [...this.state.todos, task];
     this.setState({todos: tmpState});
-    console.log(this.state)
+  }
+  removeTask = (id) =>{
+    const tmpState = this.state.todos.filter(task =>{
+      return task.id !== id;
+    })
+    this.setState({todos: tmpState})
   }
   render(){
     return (
       <div className="App">
         <h3 className="center">myTodoApp</h3>
-        <Tasks todos={this.state.todos} />
-        <AddTask  addTask={this.addTask}/>
+        <Tasks todos={this.state.todos} removeTask={this.removeTask} />
+        <AddTask  addTask={this.addTask} />
       </div>
     );    
   }
