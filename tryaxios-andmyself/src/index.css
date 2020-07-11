@@ -2,3 +2,12 @@ body{
   background: #222;
   color: #eee;
 }
+.dropdown-content{
+  min-width: 150px;
+}
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+	font-size: 30px;
+}
+.kBoxContainer:last-child{
+  margin-top: 50px;
+}
