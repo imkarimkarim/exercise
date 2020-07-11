@@ -2,44 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <title>react</title>
+    <link href="./style.css" type="text/css" rel="stylesheet">
+    <title>گیلان گردشگر | وبسایتی برای گردشگری در گیلان</title>
 </head>
 <body>
-
-    <div id="app"></div>
-    
-    <script type="text/babel">
-        class App extends React.Component{
-            state = {
-                name: ["Karim", "Alireza"],
-                birthDay: 2000,                
-            }
-            ziroOrOne = () =>{
-                return Math.round(Math.random() * 1);
-            }
-            randomNumber = () =>{
-                let tmp = Math.round(Math.random() * 1000);
-                this.setState({
-                    randomNum: tmp,
-                })
-            }
-            
-            render(){
-                return(
-                <div className="container">
-                    <h3>Hi, My Name Is { this.state.name[ this.ziroOrOne() ] }</h3>
-                    <button onClick={this.randomNumber}>randomRandom</button>
-                    <h3>{ this.state.randomNum }</h3>
+    <div>
+        <div id="header">
+              <header>
+                  <div class="bigTitle">
+                      <h1>گیلان گردشگر</h1>
+                      <p>وبسایتی برای گردشگری در گیلان</p>
+                    </div>
                 </div>
-                )
-            }
-        }
-
-        ReactDOM.render(<App />, document.getElementById("app"));
-    </script>
+            </header>
+        </div>
 </body>
 </html>
