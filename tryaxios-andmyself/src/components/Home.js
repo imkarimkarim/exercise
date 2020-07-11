@@ -1,25 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 
-const Home = () =>{
-    return(
-        <div className="container kBoxContainer">
-            <div className="row container">
-                <div className="col s12 m12">
-                <div className="card blue-grey darken-1">
-                    <div className="card-content white-text">
-                    <span className="card-title">Card Title</span>
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
+class Home extends Component {
+    state = {
+        data:{
+            posts: []
+        }
+        
+    }
+    componentDidMount(){
+        axios.get("https://baconipsum.com/api/?type=meat-and-filler")
+            .then(res =>{
+                this.setState({data: {posts: res.data}})
+            })
+    }
+    render(){
+        const posts = this.state.data.posts;
+        const postsList = posts.map(post =>{
+            return(
+                <div className="container kBoxContainer">
+                <div className="row container">
+                    <div className="col s12 m12">
+                    <div className="card grey darken-4 z-depth-2">
+                        <div className="card-content white-text">
+                        <span className="card-title">
+                        </span>
+                        <p>{post}</p>
+                        </div>
                     </div>
-                    <div className="card-action">
-                    <a href="!#">This is a link</a>
-                    <a href="!#">This is a link</a>
                     </div>
-                </div>
                 </div>
             </div>
-        </div>
-    )
+            )
+        })
+        return(
+            <div>
+                {postsList}
+
+            </div>
+        )
+    }
 }
 
 export default Home
