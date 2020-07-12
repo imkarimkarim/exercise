@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './index.css'
+// import '../public/script.js'
+// import '../public/jquery-3.5.1.min.js'
+// import '../public/materialize.min.css'
+// import '../public/materialize.min.js'
 
 ReactDOM.render(
   <React.StrictMode>

@@ -12,6 +12,7 @@ const Navbar = () =>{
             <nav>
             <div className="nav-wrapper Medium cyan lighten-1">
                 <Link to="/" className="brand-logo center">tryAxiosAndTestMySelf</Link>
+                <Link to="/avatars" className="">randomAvatar</Link>
                 <ul className="right">
                 <li><a className="dropdown-trigger" href="#!" data-target="dropdown1"><i className="large material-icons">account_circle</i></a></li>
                 </ul>
