@@ -10,29 +10,38 @@ class Avatarts extends Component{
     
     componentDidMount(){    
         
-        if(typeof(this.props.match) != 'undefined' ) {
-            axios.get("https://avatars.dicebear.com/api/bottts/" + this.props.match.params.avatar + ".svg")
-            .then(res =>{
-                this.setState({
-                    data: {
-                        avatar: res.config.url
-                    }
+        if(typeof(this.props.match) != 'undefined') {
+            if(this.props.match.path !== "/avatars"){
+                axios.get("https://avatars.dicebear.com/api/bottts/" + this.props.match.params.avatar + ".svg")
+                .then(res =>{
+                    this.setState({
+                        data: {
+                            avatar: res.config.url
+                        }
+                    })
                 })
-            })
+            }
+            else{
+                this.setRandomAvatar()
+            }
         }
         else{
-            axios.get("https://avatars.dicebear.com/api/bottts/" + this.randomNum() + ".svg")
-            .then(res =>{
-                this.setState({
-                    data: {
-                        avatar: res.config.url
-                    }
-                })
-            })
+            this.setRandomAvatar()
         }
 
     }
     
+    setRandomAvatar = () =>{
+        axios.get("https://avatars.dicebear.com/api/bottts/" + this.randomNum() + ".svg")
+        .then(res =>{
+            this.setState({
+                data: {
+                    avatar: res.config.url
+                }
+            })
+        })
+    }
+
     randomNum = () =>{
         console.log(this.props)
         return Math.floor(Math.random() * 200);
