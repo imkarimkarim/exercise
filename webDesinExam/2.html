@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم ورود اطلاعات</title>
+    <style>
+        *, *::before, *::after{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+        input{
+            text-align: right;
+            width: 200px;
+        }
+        .center{
+            text-align: center;
+        }
+        .input{
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="form" class="center">
+        <h2>اطلاعات خود را وارد کنید</h2>
+        <hr>
+        <p class="center"></p>
+        <form action="/register/signin.php">
+            <div class="input">
+            <label for="stdCode">کد دانشجویی: </label>
+            <input id="stdCode" name="stdCode" type="number" min="1111111111111111" max="9999999999999999" placeholder="۱۶ رقم" required>
+            </div>
+
+            <div class="input">
+            <label for="stdCode">نام دانشجو: </label>
+            <input id="stdName" name="stdName" type="text">
+            </div>
+
+            <div class="input">
+            <label for="stdField" required>رشته تحصیلی: </label>
+            <select name="stdField" id="stdField">
+                <option value="volvo">نرم افزار</option>
+                <option value="saab">برق</option>
+                <option value="opel">فیزیک</option>
+                <option value="audi">مکانیک</option>
+            
+                <option value="audi">دیگر</option>
+            </select>
+        </div>
+
+        <div class="input">
+            <label for="male">کاردانی</label>
+            <input type="radio" id="کاردانی" name="Grade" value="کاردانی">
+            
+            <label for="female">کارشناسی</label>
+            <input type="radio" id="کارشناسی" name="Grade" value="کارشناسی">
+            
+            <label for="other">کارشناسی ارشد</label> 
+            <input type="radio" id="کارشناسی ارشد" name="Grade" value="کارشناسی ارشد">
+            
+            <label for="other">دکترا</label> 
+            <input type="radio" id="دکترا" name="Grade" value="دکترا">
+            
+            </div>
+
+            <input type="submit" value="ثبت اطلاعات">
+        </form>
+    </div>
+    
+</body>
+</html>

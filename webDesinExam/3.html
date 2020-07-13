@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <title>singlePhoto</title>
+    <style>
+        *, *::before, *::after{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            padding: -50px;
+        }
+        img{
+            width: 60%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://apod.nasa.gov/apod/image/2007/C2020_F3_NEOWISE_2020_07_10_druckmuller.jpg" alt="The Tails of Comet NEOWISE Image Credit & Copyright: Miloslav Druckmuller (Brno University of Technology) ">
+    </div>
+
+    <script type="text/javascript">
+        'use strict';
+        let tmpArr = []
+        for(let i = 0; i < 7; i++){
+            tmpArr[i] = Math.floor(Math.random() * 90) + 65;
+        }
+        let captcha = '';
+        for(let i = 0; i < 7; i++){
+            captcha += String.fromCharCode(tmpArr[i]);
+        }
+        document.getElementById('randomNumber').innerHTML = captcha;
+    </script>
+</body>
+</html>
