@@ -1,0 +1,16 @@
+{
+  "name": "testJimp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "detect-character-encoding": "^0.8.0",
+    "jimp": "^0.16.0"
+  }
+}
