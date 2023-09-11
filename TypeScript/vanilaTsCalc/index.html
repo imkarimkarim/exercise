@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calc</title>
+  </head>
+  <body>
+    <div id="app">
+      <h3 class="title hvr-float-shadow">Simple Calculator</h3>
+      <div class="calc">
+        <input
+          class="number"
+          type="number"
+          name="firstNumber"
+          id="firstNumber"
+          placeholder="number"
+        />
+        <select name="operation" id="operation">
+          <option value="sum">+</option>
+          <option value="minues">-</option>
+          <option value="multiply">x</option>
+          <option value="divide">/</option>
+        </select>
+        <input
+          class="number"
+          type="number"
+          name="secondNumber"
+          id="secondNumber"
+          placeholder="number"
+        />
+        <button>=</button>
+        <p id="result"></p>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

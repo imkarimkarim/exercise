@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "main": "index.html",
+  "devDependencies": {
+    "eslint": "^8.21.0"
+  },
+  "dependencies": {},
+  "private": true,
+  "license": "MIT"
+}

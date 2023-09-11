@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#c7d931, #3ec4cc);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#main {
+    display: flex;
+    width: 100%;
+}
+
+.col1,
+.col2,
+.col3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+}
+#main > div {
+    flex: 4;
+}
+
+.gameBoard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 10px;
+}
+
+.red {
+    background: #a73231;
+}
+.blue {
+    background-color: #3333a8;
+}
+
+.playerTurn,
+.title,
+.gameStatus {
+    font-size: 1.7em;
+}
+.playerTurn {
+    margin-top: 40px;
+}
+
+button {
+    background-color: #11346c;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.1em;
+    margin-top: 10px;
+}

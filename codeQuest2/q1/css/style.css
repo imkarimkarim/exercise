@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+body {
+    height: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+}
+.main {
+    width: 120%;
+    height: 120%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(4px);
+    position: absolute;
+    top: 0;
+    z-index: -10;
+    margin-top: -10px;
+}
+
+.music-container {
+    padding: 20px 10px;
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+    width: 500px;
+    height: 600px;
+    background: rgb(0, 102, 195);
+    background: linear-gradient(260deg, rgba(0, 102, 195, 0.4431022408963585) 28%, rgba(121, 0, 195, 0.4515056022408963) 63%);
+    border-radius: 10px;
+    margin-top: -150px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.475);
+}
+
+.poster-box {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* padding: 50px; */
+}
+
+.poster-box img {
+    width: 50%;
+}
+
+.contoroler-box {
+    height: 50%;
+}
+
+.download-and-mixer {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px 0;
+}
+
+.slider_container {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-time,
+.total-duration {
+    margin-top: 10px;
+    color: black;
+    font-weight: 500;
+    font-size: 0.7rem;
+}
+
+.seek_slider,
+.volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 2px;
+    background: white;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #02fff2;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.seek_slider:hover,
+.volume_slider:hover {
+    opacity: 1;
+}
+
+.seek_slider {
+    margin-top: 10px;
+    width: 90%;
+}
+
+.download-button {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(31, 52, 70, 0);
+}
+
+.download-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.timer-range-container {
+    width: 90%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.playpause-track,
+.prev-track,
+.next-track {
+    padding: 25px;
+    opacity: 0.8;
+    /* width: 0px; */
+
+    /* Smoothly transition the opacity */
+    transition: opacity 0.2s;
+}
+
+.playpause-track img,
+.prev-track img,
+.next-track img {
+    width: 60px;
+}
+
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+    opacity: 1;
+}

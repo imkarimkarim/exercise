@@ -1,0 +1,98 @@
+#nav__logo-and-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white;
+}
+
+nav {
+  background-color: #222;
+  padding: 10px;
+}
+
+#nav__links {
+  display: none;
+}
+
+.nav__links-show {
+  display: block !important;
+  text-align: center;
+}
+
+#nav__links li {
+  padding: 5px 0;
+}
+
+#nav__links li:hover {
+  background: #333;
+}
+
+#nav__links a {
+  color: white;
+}
+
+#nav__links a:hover {
+  color: #fd784e;
+}
+
+#nav__links a:visited {
+  color: gray;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #nav__toggle-button {
+    display: none;
+  }
+
+  #nav__links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #nav__links ul {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    justify-content: space-between;
+  }
+
+  #nav__links li {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  #nav__links li:hover {
+    background: transparent;
+  }
+
+  #nav__links__auth,
+  #nav__links__pages {
+    display: flex;
+  }
+
+  #nav__links__auth {
+    font-weight: 200;
+  }
+
+  #nav__links__auth li:first-child {
+    border-right: 1px solid white;
+    margin-right: 7px;
+    padding-right: 15px;
+  }
+
+  #nav__links__auth li:first-child a {
+    color: gray;
+  }
+
+  #nav__links__auth li:nth-child(2) {
+    padding-left: 10px;
+  }
+}

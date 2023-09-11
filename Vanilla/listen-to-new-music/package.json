@@ -1,0 +1,11 @@
+{
+  "name": "listen-to-new-music",
+  "version": "0.0.0",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "feather-icons": "^4.29.0",
+    "normalize.css": "^8.0.1"
+  }
+}

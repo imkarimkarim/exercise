@@ -1,0 +1,18 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "main": "index.html",
+  "scripts": {
+    "cssbuild:watch": "tailwindcss -i ./src/style.css -o ./src/style.build.css --watch",
+    "cssbuild:minify": "tailwindcss -i ./src/style.css -o ./src/style.build.min.css --minify",
+    "cbw": "yarn cssbuild:watch",
+    "cbm": "yarn cssbuild:minify"
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {},
+  "private": true,
+  "license": "MIT"
+}

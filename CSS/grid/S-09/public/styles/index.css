@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+.block {
+    background-color: #fff;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    padding: 32px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    background-color: antiquewhite;
+}
+
+.text > span,
+.text {
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #777;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

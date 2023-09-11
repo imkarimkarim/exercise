@@ -1,0 +1,9 @@
+{
+	"id": "KoybRmiXMh0QUet",
+	"json": "{\"id\":\"KoybRmiXMh0QUet\",\"url\":\"https://ckgsir.com/\",\"uniqueKey\":\"https://ckgsir.com\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":1,\"errorMessages\":[\"Error: Request blocked - received 403 status code.\\n    at PlaywrightCrawler._throwOnBlockedRequest (/home/alirezamadani/Documents/codes/exercise/playwright/node_modules/@crawlee/basic/internals/basic-crawler.js:580:19)\\n    at PlaywrightCrawler._responseHandler (/home/alirezamadani/Documents/codes/exercise/playwright/node_modules/@crawlee/browser/internals/browser-crawler.js:329:22)\\n    at PlaywrightCrawler._runRequestHandler (/home/alirezamadani/Documents/codes/exercise/playwright/node_modules/@crawlee/browser/internals/browser-crawler.js:229:24)\\n    at async PlaywrightCrawler._runRequestHandler (/home/alirezamadani/Documents/codes/exercise/playwright/node_modules/@crawlee/playwright/internals/playwright-crawler.js:110:9)\\n    at async wrap (/home/alirezamadani/Documents/codes/exercise/playwright/node_modules/@apify/timeout/index.js:52:21)\"],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":5}}}",
+	"method": "GET",
+	"orderNo": 1688903732677,
+	"retryCount": 1,
+	"uniqueKey": "https://ckgsir.com",
+	"url": "https://ckgsir.com/"
+}

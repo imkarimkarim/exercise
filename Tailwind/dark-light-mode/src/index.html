@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="description" content="a simple html page" />
+    <title>Hover Cards</title>
+    <link href="style.min.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-white dark:bg-gray-900">
+    <!-- <img class="feather" src="/assets/icons/svg/activity.svg" alt="" /> -->
+
+    <div id="wrapper" class="flex justify-center">
+      <div class="pt-4 flex w-1/2 justify-center">
+        <button id="toggleMode-button" class="text-dark dark:text-white">
+          <!-- will be filled by js -->
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script src="/node_modules/feather-icons/dist/feather.min.js"></script>
+    <script>
+      // initating icons
+      feather.replace();
+    </script>
+  </body>
+</html>

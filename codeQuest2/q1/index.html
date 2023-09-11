@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>q1</title>
+    </head>
+    <body>
+        <div class="music-container">
+            <div class="poster-box">
+                <img src="image/Music_picture.png" alt="poster of music" />
+            </div>
+            <div class="contoroler-box">
+                <div class="download-and-mixer">
+                    <div class="slider_container">
+                        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()" />
+
+                        <div class="timer-range-container">
+                            <div class="current-time">00:00</div>
+                            <div class="total-duration">00:00</div>
+                        </div>
+                    </div>
+
+                    <button class="download-button"><img src="image/download.png" alt="download icon" /></button>
+                </div>
+
+                <div class="buttons">
+                    <div class="shuffle" onclick=""><img src="image/random.png" alt="" /></div>
+                    <div class="prev-track" onclick="prevTrack()"><img src="image/Prev.png" alt="" /></div>
+                    <div class="playpause-track" onclick="playpauseTrack()"><img src="image/Play (1).png" alt="" /></div>
+                    <div class="next-track" onclick="nextTrack()"><img src="image/Next.png" alt="" /></div>
+                    <div class="sound-mute" onclick="muteSound()"><img src="image/mute.png" alt="" /></div>
+                </div>
+            </div>
+        </div>
+        <div class="main" style="background-image: url('image/Music_picture.png')"></div>
+
+        <audio id="myAudio">
+            <source src="1.mp3" type="audio/mp3" />
+        </audio>
+    </body>
+</html>

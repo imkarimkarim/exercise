@@ -1,0 +1,14 @@
+{
+  "name": "dots-and-boxes",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^5.6.0"
+  },
+  "scripts": {
+    "test": "cypress open"
+  },
+  "author": "",
+  "license": "ISC"
+}

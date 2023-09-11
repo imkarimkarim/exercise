@@ -1,0 +1,38 @@
+@import url("../node_modules/normalize.css/normalize.css");
+
+body {
+  background: #2d2d2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+}
+
+.input input {
+  width: auto;
+  padding: 12px 14px;
+  transition: all 2s ease;
+}
+
+.input-hide input {
+  width: 0;
+  padding: 12px 0;
+  border: none;
+  transition: all 2s ease;
+}
+
+.icon {
+  padding: 2.5px;
+  display: flex;
+  background: white;
+}
+
+.icon svg {
+  margin: auto;
+  width: 40px;
+  height: 40px;
+}
